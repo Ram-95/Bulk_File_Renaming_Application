@@ -47,7 +47,7 @@ def bulk_file_rename(path):
     
 #************************************************************************#
     ''' Code for Undoing the Rename Operation '''
-    choice = input('UNDO Renaming ? (Y/N): ')
+    choice = input('\nUNDO Renaming ? (Y/N): ')
 
     if choice in ('y', 'Y'):
         file_list_new = os.listdir()
@@ -55,6 +55,8 @@ def bulk_file_rename(path):
         for i in range(len(file_list_new)):
             os.rename(file_list_new[i], file_list[i])
         
+        return '***************** UNDO Completed. *****************'
+
     return '***************** File Renaming Completed. *****************'
     
 
